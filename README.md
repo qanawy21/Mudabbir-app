@@ -1,9 +1,3 @@
-عذراً على ذلك! بناءً على توضيحك بأن المشروع مبني بالكامل بدون JavaScript (Pure HTML & CSS)، قمت بتعديل الوصف والمميزات لتوضيح أن هذا المشروع عبارة عن قالب واجهة مستخدم (UI Template) ثابت ونظيف.
-
-إليك النسخة المعدلة:
-
----
-
 # Mudabbir App – Personal Finance Dashboard (UI Template)
 
 Mudabbir App is a modern, responsive personal finance dashboard UI designed to smartly manage your money, track expenses, and monitor budgets. Built entirely using **pure HTML5 and CSS3 without any JavaScript**, this static web template features a clean, well-structured layout with sections for quick actions, transaction tracking, and bill management. It is ideal for developers looking for a ready-to-use, responsive dashboard layout to integrate with their backend systems.
