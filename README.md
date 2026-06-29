@@ -34,13 +34,8 @@ Mudabbir App is a modern, responsive personal finance dashboard UI designed to s
 
 ---
 
-## 🎥 Watch the Demo on LinkedIn
-
-**🔗 Watch on LinkedIn:** [coming soon]
-
----
-
 ## 👀 Website Preview
+<img width="1728" height="2496" alt="Gemini_Generated_Image_dilsitdilsitdils" src="https://github.com/user-attachments/assets/313ef320-4fbc-414f-8bef-9bc0fee50ec9" />
 
 ---
 
@@ -83,4 +78,8 @@ If you'd like to contribute, feel free to fork the repo and submit a pull reques
 
 ## ⭐ Support
 
-If you found this project helpful or inspiring, please consider giving it a ⭐.
+If you found this project helpful or inspiring, please consider giving it a ⭐. Your support helps me grow and share more open-source projects like this!
+
+## 
+
+Built with ❤️ by Mahmoud Shehto | © 2026 Mudabbir App. All rights reserved.
