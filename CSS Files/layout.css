@@ -1,0 +1,97 @@
+/* Layout Out File For Responsive Design in all Screen📱💻 */
+
+/* breaking Point Design */
+/* xs */
+@media screen and (max-width:639px) {
+
+}
+/* s */
+@media (max-width: 768px) {
+    .page{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "hero-section"
+        "aside";
+    }
+    .hero-section .header-profile .inner-header-profile .logo-header .connect {
+    width: 22%;
+}
+    .aside{
+        display: none;
+    }
+    .hero-section{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header-profile"
+    "current-balance"
+    "income"
+    "expenses"
+    "new-activities"
+    "monthly-bills"
+    "table"
+    "budget"
+    "income-vs-expenses"
+    "payment-methods";
+}
+.hero-section .header-profile .inner-header-profile{
+    flex-direction: column;
+    gap:20px;
+}
+
+.logo-header,
+.profile{
+    width:100% !important;
+}
+.table{
+    overflow-x:auto;
+}
+.hero-section .header-profile .inner-header-profile .profile .name-img {
+    width: 60%;
+}
+.hero-section .header-profile .inner-header-profile .profile .logo {
+    width: 11%;
+}
+.hero-section .new-activities .inner-new-activities .new-bank-account .inner-new-bank-account .logo-account .make-new-account {
+    flex-wrap: nowrap;
+}
+.hero-section .new-activities .inner-new-activities .new-bank-account .inner-new-bank-account .logo-account .make-new-account .logo {
+    width: 18%;
+}
+.hero-section .new-activities .inner-new-activities .new-card .inner-new-card .logo-card .make-new-card .logo {
+    width: 20%;
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun .header-p-logo {
+    width: 60%;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .red-green {
+    gap: 20px;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .header-p h2 {
+    width: 55%;
+}
+.hero-section .account-summary .inner-account-summary .account .header-p-logo {
+    flex-wrap: nowrap;
+    width: 65%;
+}
+.hero-section .account-summary .inner-account-summary .account .header-p-logo p {
+    font-size: 11px;
+}
+#card-1 {
+    flex-wrap: nowrap;
+}
+table{
+    min-width:900px;
+}
+}
+/* md */
+@media screen and (min-width:769px) and (max-width:1024px){
+
+}
+/* lg */
+@media screen and (min-width:1025px) and (max-width:1280px){
+
+}
+/* xl */
+@media screen and (min-width:1281px){
+
+}

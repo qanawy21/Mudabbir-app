@@ -1,0 +1,1324 @@
+* , *::after , *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+    direction: rtl;
+}
+.bdr-bg-clr{
+    background-color: #FFFFFF;
+    border: 0.2px solid #E6E7EB;
+    border-radius: 15px;
+    box-shadow: 0.3px 0.3px 2px rgb(200, 200, 200);
+}
+.clr-blue{
+    color: #1447E6;
+}
+.clr-green{
+    color: #00A63D;
+}
+.clr-red{
+    color: #FA2D37;
+}
+.clr-orange{
+    color: #FF6900;
+}
+.gap{
+    gap: 5px;
+}
+.f-size-h3{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+}
+.f-size-p-1{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #101828;
+}
+.pdg-30{
+    padding:25px;
+}
+.pdg-20{
+    padding:20px;
+}
+.bg-blue{
+    background-color: #F0F5FF;
+}
+.br-radius{
+    border-radius: 10px;
+}
+body{
+    margin: 0;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+/* ------------------------------------------------------------ */
+
+.page {  display: grid;
+    grid-template-columns: 13% 1fr 1fr 1fr;
+    grid-auto-rows:auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "aside hero-section hero-section hero-section"
+    "aside hero-section hero-section hero-section"
+    "aside hero-section hero-section hero-section"
+    "aside hero-section hero-section hero-section"
+    "aside hero-section hero-section hero-section"
+;
+}
+
+.aside { grid-area: aside; }
+
+.hero-section {  display: grid;
+    align-items: start;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows:minmax(100px,auto);
+    gap: 15px 15px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "header-profile header-profile header-profile"
+    "current-balance income expenses"
+    "new-activities table table"
+    "monthly-bills table table"
+    "budget income-vs-expenses payment-methods"
+    ;
+    grid-area: hero-section;
+}
+
+.header-profile { grid-area: header-profile; }
+
+/* .transactions {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 25px 25px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "current-balance income expences";
+    grid-area: transactions;
+} */
+
+.current-balance { grid-area: current-balance; }
+
+.income { grid-area: income; }
+
+.expenses { grid-area: expenses; }
+
+.new-activities { grid-area: new-activities; }
+
+.monthly-bills { grid-area: monthly-bills; }
+
+.table { grid-area: table; }
+
+.budget { grid-area: budget; }
+
+.income-vs-expenses { grid-area: income-vs-expenses; }
+
+.account-summary { grid-area: account-summary; }
+
+.payment-methods { grid-area: payment-methods; }
+
+/* --------------------------- */
+
+
+
+/* ----------------------------- */
+
+
+.page{
+    position: relative;
+}
+.d-flex{
+    display: flex;
+}
+.f-wrap{
+    flex-wrap: wrap;
+}
+.j-content{
+    justify-content: center;
+}
+.a-items{
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #4a5565;
+}
+ul{
+    list-style: none;
+}
+.aside{
+    position: sticky;
+    top: 0;
+    right: 0;
+    width:100%;
+    height: 100vh;
+    background-color: rgb(252, 251, 251);
+    z-index: 100;
+    box-shadow: 0.2px 0.2px 1px black;
+}
+.aside .inner-aside{
+    margin: 20px;
+}
+.aside .inner-aside .logo-header{
+    width: 100%;
+    gap: 20px;
+    margin: 10px 0;
+}
+.aside .inner-aside .logo-header .header h1{
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 4px;
+    color: #000000;
+}
+.aside .inner-aside .logo-header .header p{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #4a5565;
+}
+.aside .inner-aside .logo-header .logo{
+    width: 23%;
+    padding: 10px 0;
+    background-image: linear-gradient(150deg, #2457F6 , #4035DC);
+    box-shadow:1px 1px 3.5px #4035DC ;
+    border-radius: 10px;
+}
+.aside .inner-aside .logo-header .logo img{
+    width: 60%;
+    margin: auto;
+}
+.aside .inner-aside .aside-lists li{
+    padding: 7px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+.aside .inner-aside .aside-lists li:not(:first-child):hover{
+    background-color: #e4e6e9;
+}
+.aside .inner-aside .aside-lists .logo-list{
+    width: 100%;
+    gap: 10px;
+}
+.aside .inner-aside .aside-lists .logo-list .logo{
+    width: 13%;
+}
+.aside .inner-aside .aside-lists .logo-list .logo img{
+    width: 100%;
+}
+.aside .inner-aside .aside-quick-procedures{
+    margin-top: 15px;
+}
+.aside .inner-aside .aside-quick-procedures h2{
+    margin-bottom: 20px;
+}
+.aside .inner-aside .aside-quick-procedures .send-money{
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+.aside .inner-aside .aside-quick-procedures .add-money{
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+.aside .inner-aside .aside-quick-procedures .pay-bill{
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+.aside .inner-aside .aside-quick-procedures .investment{
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+.aside .inner-aside .aside-quick-procedures .hover-effect{
+    transition-duration:1s ;
+    border-radius: 10px;
+}
+.aside .inner-aside .aside-quick-procedures .hover-effect:hover{
+    background-color: #e4e6e9;
+}
+.aside .inner-aside .aside-quick-procedures .send-money .logo{
+    width: 14%;
+    padding: 5px 0;
+    border-radius:5px ;
+    background-color: #EBF3FF;
+}
+.aside .inner-aside .aside-quick-procedures h2{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #364153;
+}
+.aside .inner-aside .aside-quick-procedures p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #111827;
+}
+.aside .inner-aside .aside-quick-procedures .add-money .logo{
+    width: 14%;
+    padding: 5px 0;
+    border-radius:5px ;
+    background-color: #ECFAEF;
+}
+.aside .inner-aside .aside-quick-procedures .pay-bill .logo{
+    width: 14%;
+    padding: 5px 0;
+    border-radius:5px ;
+    background-color: #F8EEFF;
+}
+.aside .inner-aside .aside-quick-procedures .investment .logo{
+    width: 14%;
+    padding: 5px 0;
+    border-radius:5px ;
+    background-color: #FFF1E7;
+}
+.aside .inner-aside .aside-quick-procedures .send-money .logo img{
+    width: 70%;
+    margin: auto;
+}
+.aside .inner-aside .aside-quick-procedures .add-money .logo img{
+    width: 70%;
+    margin: auto;
+}
+.aside .inner-aside .aside-quick-procedures .pay-bill .logo img{
+    width: 70%;
+    margin: auto;
+}
+.aside .inner-aside .aside-quick-procedures .investment .logo img{
+    width: 70%;
+    margin: auto;
+}
+.hero-section{
+    background-color:#F9FAFB;
+    padding: 25px;
+}
+.hero-section .header-profile{
+    background-color: #FAFBFE;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0.2px 0.2px 1px black;
+}
+.hero-section .header-profile .inner-header-profile{
+    width: 100%;
+    justify-content: space-between;
+}
+.hero-section .header-profile .inner-header-profile .logo-header{
+    width: 30%;
+    gap: 15px;
+}
+.hero-section .header-profile .inner-header-profile .logo-header .header{
+    margin-left: 20px;
+}
+.hero-section .header-profile .inner-header-profile .logo-header .logo{
+    width: 14%;
+    padding: 10px 0;
+    background-image: linear-gradient(150deg, #2457F6 , #4035DC);
+    box-shadow:1px 1px 3.5px #4035DC ;
+    border-radius: 15px;
+}
+.hero-section .header-profile .inner-header-profile .logo-header .logo img{
+    width: 70%;
+    margin: auto;
+}
+.hero-section .header-profile .inner-header-profile .logo-header .connect{
+    background-color: #F0FDF4;
+    border-radius: 20px;
+    padding: 5px;
+    width: 20%;
+    gap: 10px;
+    justify-content: center;
+}
+.hero-section .header-profile .inner-header-profile .logo-header .connect span{
+    color: #008236;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.hero-section .header-profile .inner-header-profile .logo-header .connect .circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: glow 1.5s infinite alternate;
+}
+@keyframes glow {
+    from {
+        background-color: #28b653;
+    }
+
+    to {
+        background-color: #9becb5;
+    }
+}
+.hero-section .header-profile .inner-header-profile .profile{
+    width: 40%;
+    gap: 15px;
+    justify-content: flex-end;
+}
+.hero-section .header-profile .inner-header-profile .profile .logo{
+    width: 8%;
+    padding: 10px 3px;
+    background-color: #F9FAFB;
+    border: 2px solid #E6E7EB;
+    border-radius:15px ;
+    transition: 1s;
+    cursor: pointer;
+}
+.hero-section .header-profile .inner-header-profile .profile .logo:hover{
+    background-color:#dadbdc ;
+}
+.hero-section .header-profile .inner-header-profile .profile .logo img{
+    width: 60%;
+    margin: auto;
+}
+.hero-section .header-profile .inner-header-profile .profile .notification-icon{
+    position: relative;
+}
+.hero-section .header-profile .inner-header-profile .profile .notification-icon span{
+    position: absolute;
+    background-color: red;
+    border-radius:50%;
+    display: inline-block;
+    padding:0 5px ;
+    top: -5px;
+    right: -5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+}
+.hero-section .header-profile .inner-header-profile .profile .name-img{
+    border: 2px solid #E6E7EB;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    justify-content: space-between;
+    width: 35%;
+    transition: 1s;
+}
+.hero-section .header-profile .inner-header-profile .profile .name-img:hover{
+    transform: translate(-2px,-2px);
+}
+.hero-section .header-profile .inner-header-profile .profile .name-img h2{
+    color: #101828;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+.hero-section .header-profile .inner-header-profile .profile .name-img p{
+    color: #101828;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #6a7282;
+}
+.hero-section .header-profile .inner-header-profile .profile .name-img .img{
+    width: 32%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.hero-section .header-profile .inner-header-profile .profile .name-img .img img{
+    width: 100%;
+    margin: auto;
+}
+.hero-section .transactions {
+    margin-top: 25px;
+}
+.hero-section .transactions p{
+    color: #6a7282;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+.hero-section .transactions .pound{
+    color: #101828;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+.hero-section .transactions span{
+    color: #00a63e;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+.hero-section .transactions .clr-red{
+    color: #e7000b;
+}
+.hero-section .transactions .arrow{
+    width: 3%;
+}
+.hero-section .transactions .arrow img{
+    width: 100%;
+}
+.hero-section .new-activities h2{
+    color: #101828;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+.hero-section .new-activities span{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 28px;
+}
+.hero-section .new-activities h3{
+    color: #101828;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.hero-section .new-activities p{
+    color: #4a5565;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+}
+.hero-section .new-activities .hour{
+    color:#6a7282;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    position: relative;
+    right: 10%;
+}
+.hero-section .new-activities .inner-new-activities .new-bank-account{
+    padding: 15px;
+    background-color: #F0F5FF;
+    border-left: 5px solid #2B7FFF;
+    border-radius:10px ;
+    margin-bottom: 20px;
+}
+.hero-section .new-activities .inner-new-activities .new-bank-account .inner-new-bank-account .logo-account{
+    width: 100%;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 15px;
+}
+.hero-section .new-activities .inner-new-activities .new-bank-account .inner-new-bank-account .logo-account .make-new-account {
+    gap: 15px;
+    width: 70%;
+}
+.hero-section .new-activities .inner-new-activities .new-bank-account .inner-new-bank-account .logo-account .make-new-account .logo{
+    width: 10%;
+    padding: 8px 5px;
+    background-color: #DAEAFE;
+    border-radius: 50px;
+}
+.hero-section .new-activities img{
+    width: 70%;
+    margin: auto;
+}
+.hero-section .new-activities .inner-new-activities .new-card{
+    padding: 15px;
+    background-color:#F0FDF4;
+    border-left: 5px solid #00C951;
+    border-radius:10px ;
+    margin-bottom: 20px;
+}
+.hero-section .new-activities .inner-new-activities .new-card .inner-new-card .logo-card{
+    width: 100%;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 15px;
+}
+.hero-section .new-activities .inner-new-activities .new-card .inner-new-card .logo-card .make-new-card {
+    gap: 15px;
+    width: 70%;
+}
+.hero-section .new-activities .inner-new-activities .new-card .inner-new-card .logo-card .make-new-card .logo{
+    width: 10%;
+    padding: 8px 5px;
+    background-color: #DCFCE6;
+    border-radius: 50px;
+}
+.hero-section .new-activities img{
+    width: 70%;
+    margin: auto;
+}
+.hero-section .new-activities .inner-new-activities .line{
+    width: 100%;
+    height: 1.5px;
+    background-color: #F3F4F7;
+    margin-bottom: 15px;
+}
+.hero-section .new-activities .inner-new-activities .btn{
+    text-align: center;
+}
+.hero-section .new-activities .inner-new-activities .btn button{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    color: #1447e6;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+.hero-section .monthly-bills .inner-monthly-bills .header-all{
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.hero-section .monthly-bills .inner-monthly-bills .header-all h2{ 
+    color: #101828;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    width: 50%;
+}
+.hero-section .monthly-bills .inner-monthly-bills .header-all p{ 
+    color: #4A5565;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.hero-section .monthly-bills .inner-monthly-bills .header-all p:hover{
+    color: #101828;
+}
+.hero-section .monthly-bills .inner-monthly-bills .p-1{
+    color: #101828;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.hero-section .monthly-bills .inner-monthly-bills .p-2{
+    color:#6a7282;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.hero-section .monthly-bills .inner-monthly-bills .all-bills{
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+    flex-direction: row-reverse;
+}
+.hero-section .monthly-bills .inner-monthly-bills .all-bills div{
+    width: 48%;
+    text-align: center;
+    background-color: #F9FAFB;
+    border: 1px solid #F3F4F7;
+    border-radius: 10px;
+    padding: 10px;
+}
+.hero-section .monthly-bills .inner-monthly-bills .all-bills div .logo{
+    width: 20%;
+    padding: 8px 5px;
+    margin: 0 auto 5px;
+}
+.hero-section .monthly-bills .inner-monthly-bills .all-bills div .bg-clr-1{
+    background-color: #FFF9C1;
+}
+.hero-section .monthly-bills .inner-monthly-bills .all-bills div .bg-clr-2{
+    background-color: #DAEAFE;
+}
+.hero-section .monthly-bills .inner-monthly-bills .all-bills div .bg-clr-3{
+    background-color: #FFE2E2;
+}
+.hero-section .monthly-bills .inner-monthly-bills .all-bills div .bg-clr-4{
+    background-color: #DCFCE6;
+}
+.hero-section .monthly-bills .inner-monthly-bills .all-bills div .logo img{
+    width: 70%;
+    margin: auto;
+}
+.hero-section .monthly-bills .inner-monthly-bills .all-bills div h3{
+    color: #6a7282;
+}
+.hero-section .table .inner-table .last-transaction{
+    width: 100%;
+    justify-content: space-between;
+    align-items: start;
+}
+.hero-section .table .inner-table .last-transaction h2{
+    color: #101828;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+.hero-section .table .inner-table .last-transaction p{
+    color: #4A5565;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.hero-section .table .inner-table .last-transaction p:hover{
+    color: #101828;
+}
+.hero-section .table .inner-table table{
+    width: 100%;
+    table-layout: fixed;
+}
+.hero-section .table .inner-table table .col-1{
+    width: 35%;
+}
+.hero-section .table .inner-table table .col-2{
+    width: 20%;
+}
+.hero-section .table .inner-table table .col-3{
+    width: 13%;
+}
+.hero-section .table .inner-table table .col-4{
+    width: 11%;
+}
+.hero-section .table .inner-table table .col-5{
+    width: 11%;
+}
+.hero-section .table .inner-table table th, td {
+    border-bottom: 1px solid #F3F4F7;
+    text-align: right;
+}
+.hero-section .table .inner-table table th{
+    padding: 0 0 25px 0;
+    color: #364153;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+.hero-section .table .inner-table table td{
+    padding: 12px 0;
+}
+/* ------------------ */
+/* ------------------ */
+.hero-section .table .inner-table table tbody tr .bgc-td{
+    /* background-color: tomato; */
+    display:inline-block ;
+    width: fit-content;
+}
+/* ----------------- */
+/* ----------------- */
+.hero-section .table .inner-table table .person{
+    justify-content: flex-end;
+}
+.hero-section .table .inner-table table td .information p{
+    color: #101828;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.hero-section .table .inner-table table td .information span{
+    color: #6a7282;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    display: inline-block;
+}
+.hero-section .table .inner-table table td .person{
+    justify-content: flex-start;
+    gap: 15px;
+}
+.hero-section .table .inner-table table td .person .logo{
+    width: 13%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.hero-section .table .inner-table table td .person .logo img{
+    width: 100%;
+}
+.hero-section .table .inner-table table td .icon-information{
+    justify-content: flex-start;
+    gap: 0;
+    /* width: 100%; */
+    /* width: fit-content; */
+    /* display: inline-flex; */
+}
+.hero-section .table .inner-table table td .icon-information .icon{
+    width: 15%;
+    padding: 8px 5px;
+}
+.hero-section .table .inner-table table td .icon-information .icon img{
+    width: 90%;
+    margin: auto;
+}
+.hero-section .table .inner-table table td .icon-information span{
+    color: #6a7282;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    display: inline-block;
+}
+.hero-section .table .inner-table table .date{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #4a5565;
+}
+.hero-section .table .inner-table table .status{
+    color: #016630;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+}
+.hero-section .table .inner-table table .money{
+    color: #101828;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+}
+.hero-section .table .inner-table table td .item-category{
+    justify-content: flex-start;
+    gap: 15px;
+} 
+.hero-section .table .inner-table table td .item-category .logo{
+    width: 13%;
+    padding: 10px 5px;
+    border-radius: 50%;
+    background-color: #FFEDD4;
+    overflow: hidden;
+}
+.hero-section .table .inner-table table td .item-category .bgc-1{
+    background-color: #DAEAFE;
+}
+.hero-section .table .inner-table table td .item-category .bgc-2{
+    background-color: #FFE2E2;
+}
+.hero-section .table .inner-table table td .item-category .bgc-3{
+    background-color: #E0E6FF;
+}
+.hero-section .table .inner-table table td .item-category .bgc-4{
+    background-color: #CFFAFE;
+}
+.hero-section .table .inner-table table td .item-category .bgc-5{
+    background-color: #D0FAE4;
+}
+.hero-section .table .inner-table table td .item-category .logo img{
+    width: 70%;
+    margin: auto;
+}
+.hero-section .table .inner-table table .no-border{
+    border: 0;
+}
+.hero-section .table .inner-table table .clr-green{
+    color: #00A63D;
+}
+.sts{
+    background-color:#DCFCE6;
+    padding: 3px 15px;
+    border-radius: 20px;
+}
+.sts-2{
+    background-color:#FFF9C1;
+    padding: 3px 15px;
+    color: #894A00;
+    border-radius: 20px;
+}
+.hero-section .budget .inner-budget .header-all{
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.hero-section .budget .inner-budget .header-all h2{
+    width: 50%;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 28px;
+    color: #101828;
+}
+.hero-section .budget .inner-budget .header-all p{
+    color: #4A5565;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.hero-section .budget .inner-budget .header-all p:hover{
+    color: #101828;
+}
+.hero-section .budget .inner-budget .total-budget{
+    background-color: #EEF4FF;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #DAEAFE;
+}
+.hero-section .budget .inner-budget .total-budget .inner-total-budget .header-all{
+    margin-bottom: 15px;
+}
+.hero-section .budget .inner-budget .total-budget .h-p h3{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color:#155dfc;
+}
+.hero-section .budget .inner-budget .total-budget .h-p p{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color:#1c398e;
+}
+.hero-section .budget .inner-budget .total-budget .p-p .p-1{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #6a7282;
+}
+.hero-section .budget .inner-budget .total-budget .p-p .p-2{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #00a63e;
+}
+.hero-section .budget .inner-budget .total-budget .user-percentage{
+    margin-bottom: 10px;
+}
+.hero-section .budget .inner-budget .total-budget .user-percentage p{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #4a5565;
+}
+.hero-section .budget .inner-budget .total-budget .user-percentage span{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #4a5565;
+}
+.hero-section .budget .inner-budget .total-budget .line{
+    width: 100%;
+    height: 8px;
+    border-radius:5px;
+    background-color: #E6E7EB;
+}
+.hero-section .budget .inner-budget .total-budget .line .line-2{
+    width: 82.5%;
+    height: 8px;
+    border-radius:5px;
+    background-image: linear-gradient(150deg, #2E7EFF , #625FFF);
+}
+.hero-section .budget .inner-budget .funny{
+    background-color: #FCFCFD;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #e9ebee;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition: 0.2s;
+}
+.hero-section .budget .inner-budget .funny:hover{
+    background-color: #F5F6F7;
+    translate: 0 -3px;
+    box-shadow: 1px 1px 2px rgb(175, 174, 174);
+}
+.hero-section .budget .inner-budget .funny .line{
+    width: 100%;
+    height: 8px;
+    border-radius:5px;
+    background-color: #E6E7EB;
+}
+.hero-section .budget .inner-budget .funny .line .line-2{
+    width: 50%;
+    height: 8px;
+    border-radius:5px;
+    background-color: #FF6900;
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun{
+    margin-bottom: 15px;
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun .header-p-logo {
+    justify-content: flex-start;
+    width: 50%;
+    gap: 10px;
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun .header-p-logo .logo{
+    width: 20%;
+    padding: 10px 5px;
+    background-color:#FFEDD4;
+    border-radius: 5px;
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun .header-p-logo .logo img{
+    width: 70%;
+    margin: auto;
+}
+#clr{
+    filter: invert(42%) sepia(90%) saturate(3000%) hue-rotate(350deg);
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun .header-p-logo h3{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #101828;
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun .header-p-logo p{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #6a7282;
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun .p-span p{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #101828;
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun .p-span span{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #176535;
+    display: inline-block;
+    padding: 5px 7px;
+    background-color: #DCFCE7;
+    border-radius: 15px;
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun .header-p-logo .clr-icon{
+    background-color: #FEE2E2;
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun .header-p-logo .logo .clr-img{
+    filter: invert(18%) sepia(95%) saturate(7484%) hue-rotate(357deg) brightness(97%) contrast(118%);
+}
+.hero-section .budget .inner-budget .funny .line .clr-line{
+    background-color: #FA2D37;
+    width: 100%;
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun .p-span .clr-span{
+    background-color: #FEE2E2;
+    color: #991B1B;
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun .header-p-logo .clr-icon-2{
+    background-color:#FCE7F3;
+}
+.hero-section .budget .inner-budget .funny .line .clr-line-2{
+    background-color: #F6329A;
+    width: 80%;
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun .p-span .clr-span-2{
+    background-color: #FEF3C6;
+    color: #92400E;
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun .header-p-logo .clr-icon-3{
+    background-color:#DCFCE7;
+}
+.hero-section .budget .inner-budget .funny .line .clr-line-3{
+    background-color: #00C951;
+    width: 86%;
+}
+.hero-section .budget .inner-budget .funny .inner-funny .fun .p-span .clr-span-3{
+    color: #176535;
+    background-color: #DCFCE7;
+}
+.hero-section .income-vs-expenses{
+    margin-bottom: 20px;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .header-p{
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .header-p h2{
+    width: 50%;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #101828;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .header-p p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #4A5565;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .header-p p:hover{
+    color: #101828;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .red-green{
+    width: 35%;
+    margin: auto ;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .red-green .green-span{
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .red-green .red-span{
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .red-green span{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #64748b;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .red-green .same-w{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 3px;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .red-green .green-span .green{
+    background-color:#0FB981;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .red-green .red-span .red{
+    background-color:#EF4444;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .charts{
+    width: 100%;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .charts .inner-chart{
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .charts .inner-chart .one-chart{
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .charts .inner-chart .one-chart .red-green-chart{
+    height: 140px;
+    align-items: flex-end;
+    gap: 3px;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .charts .inner-chart .one-chart .red-green-chart .same-w{
+    width: 18px;
+    border-radius: 4px 4px 0 0;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .charts .inner-chart .one-chart .red-green-chart .green{
+    height: 130px;
+    background-color:#0FB981;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .charts .inner-chart .one-chart .red-green-chart .red{
+    height: 60px;
+    background-color:#EF4444;
+}
+.hero-section .income-vs-expenses .inner-income-vs-expenses .charts .inner-chart .one-chart h3{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #64748b;
+}
+.hero-section .account-summary{
+    padding-bottom: 30px;
+}
+.hero-section .account-summary .inner-account-summary .header-p{
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.hero-section .account-summary .inner-account-summary .header-p h2{
+    width: 50%;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #101828;
+}
+.hero-section .account-summary .inner-account-summary .header-p p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #4A5565;
+}
+.hero-section .account-summary .inner-account-summary .header-p p:hover{
+    color: #101828;
+}
+.hero-section .account-summary .inner-account-summary .account{
+    margin-bottom: 18px;
+    justify-content: space-between;
+    background-color: #F9FAFB;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #F3F4F7;
+}
+.hero-section .account-summary .inner-account-summary .account .header-p-logo {
+    justify-content: flex-start;
+    width: 70%;
+    gap: 10px;
+}
+.hero-section .account-summary .inner-account-summary .account .header-p-logo .logo{
+    width: 16%;
+    padding: 10px 5px;
+    background-color:#DAEAFE;
+    border-radius: 5px;
+}
+.hero-section .account-summary .inner-account-summary .account .header-p-logo .bgc-gr{
+    background-color: #DCFCE6;
+}
+.hero-section .account-summary .inner-account-summary .account .header-p-logo .bgc-violet{
+    background-color: #F2E8FF;
+}
+.hero-section .account-summary .inner-account-summary .account .header-p-logo .header-p{
+    margin: 0;
+}
+.hero-section .account-summary .inner-account-summary .account .header-p-logo .logo img{
+    width: 70%;
+    margin: auto;
+}
+.hero-section .account-summary .inner-account-summary .account .header-p-logo h3{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #101828;
+}
+.hero-section .account-summary .inner-account-summary .account .header-p-logo p{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #6a7282;
+}
+.hero-section .account-summary .inner-account-summary .account .p-span p{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #101828;
+}
+#piggy-color{
+    filter: brightness(0) saturate(100%) invert(61%) sepia(53%) saturate(738%) hue-rotate(87deg) brightness(90%) contrast(95%);
+}
+.hero-section .account-summary .inner-account-summary .account .p-span .p-red{
+    color: #E7000B;
+}
+.hero-section .payment-method .inner-payment-method .header-p{
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.hero-section .payment-method .inner-payment-method .header-p h2{
+    width: 50%;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #101828;
+}
+.hero-section .payment-method .inner-payment-method .header-p p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #4A5565;
+}
+.hero-section .payment-method .inner-payment-method .header-p p:hover{
+    color: #101828;
+}
+.hero-section .payment-method .inner-payment-method .card{
+    background-color: #372AAC;
+    border-radius: 15px;
+    position: relative;
+    margin-bottom: 15px;
+}
+.hero-section .payment-method .inner-payment-method .card .inner-card span{
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 18px;
+    padding: 3px 7px;
+    color: white;
+    border-radius: 15px;
+    position: absolute;
+    left: 25px;
+    z-index: 10;
+    top: 20px;
+    backdrop-filter: blur(10px);
+    background-color: rgb(247, 244, 244,0.3);
+}
+.hero-section .payment-method .inner-payment-method .card .inner-card .company-gold{
+    justify-content: space-between;
+    margin: 5px 0 20px 0;
+}
+.hero-section .payment-method .inner-payment-method .card .inner-card .company-gold .gold{
+    width: 50px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: rgb(247, 244, 244,0.3);
+    position: relative;
+    z-index: 1;
+}
+.hero-section .payment-method .inner-payment-method .card .inner-card .company-gold .gold-1{
+    width: 25px;
+    height: 15px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: auto;
+}
+.hero-section .payment-method .inner-payment-method .card .inner-card .company-gold .company{
+    width: 45px;
+}
+.hero-section .payment-method .inner-payment-method .card .inner-card .company-gold .company img{
+    width: 100%;
+    margin: auto;
+}
+#card-1{
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.hero-section .payment-method .inner-payment-method .card .inner-card p{
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+#header{
+    width: 80%;
+}
+#h-3{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #e4e7ed;
+}
+#p-3{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #e4e7ed;
+}
+#p-4{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #e4e7ed;
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+}
+#p-5{
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #e4e7ed;
+    display: inline-block;
+    margin: 0;
+}
+#bg-pink{
+    background-color: #C70035;
+}
+#bg-blue{
+    background-color:#193CB9;
+}
+#bg-blue #p-p #p-5{
+    color: #08E072;
+}
